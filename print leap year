@@ -1,0 +1,48 @@
+Write a program to input an year as integer. Using if…else, determines whether the input is a       leap year or not.
+Code:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            {
+                int year;
+                Console.WriteLine("enter the year");
+                year = int.Parse(Console.ReadLine());
+                if (year % 4 == 0)
+                {
+                    if (year % 100 == 0)
+                    {
+                        Console.WriteLine("it is a leap year");
+                    }
+                    else
+                        Console.WriteLine("it is not a leap year");
+                }
+                if (year % 4 == 0)
+                {
+                    if (year % 100 == 0)
+                    {
+                        if (year % 400 == 0)
+                        {
+                            Console.WriteLine("it is a leapyear");
+                        }
+                    }
+                }
+                else
+                    Console.WriteLine("its not a leap year");
+
+            }
+            
+            Console.ReadKey();
+        }
+    }
+}
+
